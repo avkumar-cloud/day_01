@@ -18,8 +18,7 @@ export default function Login() {
          body: JSON.stringify(form), 
       });
         
-       const data =  await res.json();
-        
+       const data =  await res.json();        
         
        if(!res.ok){
         setError(data.message || "Invalid credentials");

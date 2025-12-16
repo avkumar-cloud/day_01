@@ -14,38 +14,38 @@ export default function App() {
 return (
 <BrowserRouter>
   <Navbar/>
-  <Routes>
-    <Route path="/" element={<Home/>} />
-    <Route path="/register" element={<Register />}/>
-    <Route path="/login" element={<Login />} />
-    <Route path="/unauthorized" element={<Unauthorized />} />
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/register" element={<Register />}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/unauthorized" element={<Unauthorized />} />
 
-    <Route
-    path="/admin"
-    element={
-    <ProtectedRoute role={['admin']}>
-    <AdminDashboard />
-    </ProtectedRoute>
-    }
-    />
+      <Route
+      path="/admin"
+      element={
+      <ProtectedRoute role={['admin']}>
+      <AdminDashboard />
+      </ProtectedRoute>
+      }
+      />
 
-    <Route
-    path="/provider"
-    element={
-    <ProtectedRoute role={['admin', 'provider']}>
-    <ProviderDashboard />
-    </ProtectedRoute>
-    }
-    />
+      <Route
+      path="/provider"
+      element={
+      <ProtectedRoute role={['admin', 'provider']}>
+      <ProviderDashboard />
+      </ProtectedRoute>
+      }
+      />
 
-    <Route
-    path="/customer"
-    element={
-    <ProtectedRoute role={['admin', 'customer']}>
-    <CustomerDashboard />
-    </ProtectedRoute>
-    }
-    />
+      <Route
+      path="/customer"
+      element={
+      <ProtectedRoute role={['admin', 'customer']}>
+      <CustomerDashboard />
+      </ProtectedRoute>
+      }
+      />
   </Routes>
 </BrowserRouter>
 );

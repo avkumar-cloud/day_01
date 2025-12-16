@@ -7,7 +7,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Hide navbar on login/register pages
+
   if (location.pathname === "/login" || location.pathname === "/register") return null;
 
   const handleLogout = () => {
